@@ -19,12 +19,12 @@ public class TestCarro {
         assertEquals(0, carro.getPassageiros(),
                 "Ao inicializar um carro o numero de passageiros deve ser zero");
         assertEquals(0, carro.getCombustivel(),
-                "Ao inicializar um carro a quantidade de combustível deve ser zero");
+                "Ao inicializar um carro a quantidade de combustivel deve ser zero");
     }
 
     @Test
     public void testEmbarque() {
-        assertTrue(carro.embarcar(), "Como o carro estava vazio, deve ser possível embarcar");
+        assertTrue(carro.embarcar(), "Como o carro estava vazio, deve ser possivel embarcar");
         assertEquals(1, carro.getPassageiros());
 
     }
@@ -33,29 +33,29 @@ public class TestCarro {
     public void testEmbarqueEmCarroLotado() {
         carro.embarcar();
         carro.embarcar();
-        assertFalse(carro.embarcar(), "Como o carro estava cheio (2 passageiros), nao deve ser possível embarcar");
+        assertFalse(carro.embarcar(), "Como o carro estava cheio (2 passageiros), nao deve ser possivel embarcar");
         assertEquals(2, carro.getPassageiros());
     }
 
     @Test
     public void testDesembarqueEmCarroVazio() {
-        assertFalse(carro.desembarcar(), "Como o carro estava vazio, nao deve ser possível desembarcar");
+        assertFalse(carro.desembarcar(), "Como o carro estava vazio, nao deve ser possivel desembarcar");
         assertEquals(0, carro.getPassageiros());
     }
 
     @Test
     public void testDesembarque() {
         carro.embarcar();
-        assertTrue(carro.desembarcar(), "Como o carro nao estava vazio, deve ser possível desembarcar");
+        assertTrue(carro.desembarcar(), "Como o carro nao estava vazio, deve ser possivel desembarcar");
         carro.embarcar();
         carro.embarcar();
-        assertTrue(carro.desembarcar(), "Como o carro nao estava vazio, deve ser possível desembarcar");
-        assertTrue(carro.desembarcar(), "Como o carro nao estava vazio, deve ser possível desembarcar");
+        assertTrue(carro.desembarcar(), "Como o carro nao estava vazio, deve ser possivel desembarcar");
+        assertTrue(carro.desembarcar(), "Como o carro nao estava vazio, deve ser possivel desembarcar");
     }
 
     @Test
     public void testAbastecerComValorInvalido() {
-        assertFalse(carro.abastecer(-30), "A quantidade de combustível deve ser uma valor positivo");
+        assertFalse(carro.abastecer(-30), "A quantidade de combustivel deve ser uma valor positivo");
         assertEquals(0, carro.getCombustivel());
     }
 
@@ -70,12 +70,12 @@ public class TestCarro {
     public void testAbastecerEstragandoCombustivel() {
         assertTrue(carro.abastecer(186));
         assertEquals(100, carro.getCombustivel(),
-                "O valor de combustível desejado excede o tamanho do tanque. Logo o tanque fica cheio");
+                "O valor de combustivel desejado excede o tamanho do tanque. Logo o tanque fica cheio");
     }
 
     @Test
     public void testDirigirCarroVazio() {
-        assertFalse(carro.dirigir(10), "O carro está vazio, logo não é possível dirigi-lo");
+        assertFalse(carro.dirigir(10), "O carro está vazio, logo nao e possivel dirigi-lo");
     }
 
     @Test
@@ -97,7 +97,7 @@ public class TestCarro {
         carro.abastecer(80);
         assertFalse(carro.dirigir(120));
         assertEquals(0, carro.getCombustivel(),
-                "A distância percorrida consumiu todo o combustível");
+                "A distancia percorrida consumiu todo o combustivel");
         assertEquals(110, carro.getQuilometragem(), "O carro percorreu 112 km");
     }
 
