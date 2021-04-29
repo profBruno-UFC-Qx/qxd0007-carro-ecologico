@@ -95,7 +95,7 @@ public class TestCarro {
         assertTrue(carro.dirigir(10));
         carro.embarcar();
         carro.abastecer(80);
-        assertTrue(carro.dirigir(120));
+        assertFalse(carro.dirigir(120));
         assertEquals(0, carro.getCombustivel(),
                 "A distância percorrida consumiu todo o combustível");
         assertEquals(110, carro.getQuilometragem(), "O carro percorreu 112 km");
