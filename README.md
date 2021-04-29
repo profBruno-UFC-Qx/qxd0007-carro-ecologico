@@ -31,6 +31,7 @@ Seu sistema deverá:
     - Caso não exista combustível suficiente para completar a viagem inteira, dirija o que for possível e emita uma mensagem indicando quanto foi percorrido.
 
 ## Diagrama
+![Diagram de classe](diagrama.png)
 
 ## Exemplo de execução 
 
