@@ -1,5 +1,3 @@
-package br.ufc.qx;
-
 public class Carro {
 
     public int getPassageiros() {
