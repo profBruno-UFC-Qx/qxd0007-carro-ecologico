@@ -96,7 +96,7 @@ public class TestCarro {
         assertFalse(carro.dirigir(120));
         assertEquals(0, carro.getCombustivel(),
                 "A distancia percorrida consumiu todo o combustivel");
-        assertEquals(110, carro.getQuilometragem(), "O carro percorreu 112 km");
+        assertEquals(110, carro.getQuilometragem(), "O carro percorreu 110 km");
     }
 
 
